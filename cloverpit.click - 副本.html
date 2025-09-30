@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete CloverPit game guide, strategies, tips and tricks. Master the demonic rogue-lite slot machine game with our comprehensive walkthrough.">
+    <meta name="keywords" content="cloverpit, cloverpit game, cloverpit guide, cloverpit strategy, cloverpit tips, rogue-lite game">
+    <link rel="canonical" href="https://cloverpit.click/">
+    <title>CloverPit - Ultimate Game Guide & Strategy Tips</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .section-card {
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+        }
+
+        .feature-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .game-screenshot {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .game-screenshot:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 24px 0;
+        }
+
+        ol, ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .image-caption {
+            text-align: center;
+            font-size: 0.875rem;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .screenshot-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-glass fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="logo-text text-2xl font-bold">CloverPit</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#intro" class="nav-link text-gray-700 hover:text-purple-600">Introduction</a>
+                    <a href="#howtoplay" class="nav-link text-gray-700 hover:text-purple-600">How to Play</a>
+                    <a href="#beginner" class="nav-link text-gray-700 hover:text-purple-600">Beginner Guide</a>
+                    <a href="#features" class="nav-link text-gray-700 hover:text-purple-600">Features</a>
+                    <a href="#faq" class="nav-link text-gray-700 hover:text-purple-600">FAQ</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu md:hidden" id="mobileMenu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#intro" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-purple-100">Introduction</a>
+                    <a href="#howtoplay" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-purple-100">How to Play</a>
+                    <a href="#beginner" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-purple-100">Beginner Guide</a>
+                    <a href="#features" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-purple-100">Features</a>
+                    <a href="#faq" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-purple-100">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-16 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">CloverPit</h1>
+            <p class="text-xl md:text-2xl text-white/90 mb-8">Master the Ultimate Rogue-lite Slot Machine Challenge</p>
+            <a href="#intro" class="btn-gradient inline-block px-8 py-3 rounded-full text-white font-semibold">
+                Start Learning
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        
+        <!-- Game Introduction -->
+        <section id="intro" class="section-card glass-effect rounded-3xl p-8 md:p-12 mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">CloverPit Game Introduction</h2>
+            <div class="space-y-4 text-gray-700">
+                <p class="text-lg">CloverPit is the demonic lovechild of Balatro and Buckshot Roulette, a rogue-lite that traps players in a hell of their own creation.</p>
+                <p class="text-lg">Locked in a rusty cell with a slot machine and an ATM, you must pay off your debt at the end of each round, or fall to ruin – literally!</p>
+            </div>
+
+            <!-- Game Screenshots -->
+            <div class="screenshot-grid mt-8">
+                <div>
+                    <img src="https://github.com/user-attachments/assets/6fd40e5d-96e5-48e8-ba2d-93dc87e39dc9" alt="CloverPit slot machine gameplay showing jackpot win" class="game-screenshot">
+                    <p class="image-caption">Hit the jackpot and win big!</p>
+                </div>
+                <div>
+                    <img src="https://github.com/user-attachments/assets/c97097e6-69e5-480e-925f-6c7f7ec3aa1e" alt="CloverPit game interface with spinning reels" class="game-screenshot">
+                    <p class="image-caption">Master the slot machine mechanics</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Play -->
+        <section id="howtoplay" class="section-card glass-effect rounded-3xl p-8 md:p-12 mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">How to Play CloverPit</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <img src="https://github.com/user-attachments/assets/7e4b6d77-bc39-4f37-869b-5e3cdf39f43e" alt="CloverPit strategy selection screen" class="game-screenshot">
+                    <p class="image-caption">Choose your strategy wisely</p>
+                </div>
+                <div>
+                    <img src="https://github.com/user-attachments/assets/76eea3f9-26ff-4bce-9c98-85a9e6de62ef" alt="CloverPit lucky charms interface" class="game-screenshot">
+                    <p class="image-caption">Collect and use powerful charms</p>
+                </div>
+            </div>
+
+            <div class="space-y-6 text-gray-700">
+                <div>
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-3">1. Basic Operations</h3>
+                    <ul class="space-y-2 list-disc">
+                        <li><strong>Slot Machine Operation:</strong> Click to insert coins, match symbols (hearts, clovers) to earn coins, prioritize high-multiplier combinations.</li>
+                        <li><strong>Debt Management:</strong> Pay off randomly generated debt within the countdown each round, or your save slot will be permanently deleted.</li>
+                        <li><strong>Item Usage:</strong> Collect items like "Frenzy" and "Prosperity" to improve clearing efficiency. Some items require sequential combinations (trigger "Ambition" first, then stack "Miracle Reversal").</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-3">2. Advanced Techniques</h3>
+                    <ul class="space-y-2 list-disc">
+                        <li>After 20 consecutive failures, activate the "Fortune Resonance Protocol" to convert defeat data into global buffs.</li>
+                        <li>Complete specific item collections (gather 5 lucky charms) or achieve hidden conditions (zero-debt escape) to unlock the freedom ending.</li>
+                        <li>Endless mode challenges extreme high scores – balance risk and reward, avoid debt collapse from chasing high multipliers.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-3">3. Using Items and Mechanics</h3>
+                    <ul class="space-y-2 list-disc">
+                        <li>Early game: Prioritize "Heart" symbols to quickly accumulate coins, avoid high-risk combinations too soon.</li>
+                        <li><strong>Item Combinations:</strong>
+                            <ul class="ml-6 mt-2 list-circle">
+                                <li>Frenzy (Yellow) + Prosperity (Green): Boost symbol multiplier and clearing efficiency for steady progress.</li>
+                                <li>Ambition (Red) + Miracle Reversal: Reverse disadvantageous situations, activate before debt critical point.</li>
+                            </ul>
+                        </li>
+                        <li>If debt exceeds 80% of current coin reserve, consider abandoning the round to preserve your save slot.</li>
+                        <li><strong>Hidden Mechanism:</strong> Click the blood scab texture in the cell corner 3 times to trigger temporary debt relief.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beginner Guide -->
+        <section id="beginner" class="section-card glass-effect rounded-3xl p-8 md:p-12 mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Beginner's Guide to CloverPit</h2>
+            
+            <div class="space-y-6 text-gray-700">
+                <div>
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-3">1. Key Items and Strategies</h3>
+                    <div class="space-y-3">
+                        <p><strong>Item Combinations:</strong></p>
+                        <ul class="space-y-2 list-disc">
+                            <li>150+ items carry "Karma Contamination Value" – excessive combo enhancement may summon materialized debt demons. Recommended combo: "Lucky Charm + Time Freezer" extends round duration for more operations.</li>
+                            <li>Probability Deconstruction: Use specific items to reorganize slot symbols, triggering the cross-dimensional 777 super equation for massive coin gains.</li>
+                        </ul>
+                        <p class="mt-3"><strong>Fortune Management:</strong></p>
+                        <ul class="space-y-2 list-disc">
+                            <li>Fortune Resonance: Accumulate negative fortune from first 20 defeats, trigger "Miracle Reversal" at critical rounds for exponential coin growth.</li>
+                            <li>Heart Rate Control: Ending determined by player heart rate. Resting heart rate below 50 triggers "Cardiac Redemption" ending – adjust state through meditation or breathing exercises.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-3">2. Advanced Techniques</h3>
+                    <div class="space-y-3">
+                        <p><strong>Operation Optimization:</strong></p>
+                        <ul class="space-y-2 list-disc">
+                            <li>Ten-Grid Distance Positioning: When encountering high-burst enemies like Pepe, maintain ten-grid distance to avoid fatal attacks while using focused Mandy for counterattack.</li>
+                            <li>Two-Star Counter Strategy: When facing two-star Pepe, actively counter to minimize losses. Combine with "Pseudo-Human" item for comeback potential.</li>
+                        </ul>
+                        <p class="mt-3"><strong>Resource Allocation:</strong></p>
+                        <ul class="space-y-2 list-disc">
+                            <li>Coin Management: Prioritize paying high-interest debts to avoid ATM penalty mechanics.</li>
+                            <li>Item Selection: Choose items based on current situation. Use "Time Freezer" under debt pressure, "Probability Deconstruction" when burst needed.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-3">3. Multiple Ending Routes</h3>
+                    <div class="space-y-3">
+                        <p><strong>Ending Trigger Conditions:</strong></p>
+                        <ul class="space-y-2 list-disc">
+                            <li>Cardiac Redemption: Triggers at resting heart rate below 50 – maintain calm during gameplay.</li>
+                            <li>Miracle Reversal: Accumulate negative fortune through consecutive misfortunes, trigger one-in-a-million probability reversal at critical round.</li>
+                        </ul>
+                        <p class="mt-3"><strong>Hidden Easter Eggs:</strong></p>
+                        <ul class="space-y-2 list-disc">
+                            <li>Domestic Violence Escape: In specific levels, find hidden items or solve puzzles to escape the front door.</li>
+                            <li>Goat Pseudo-Human: Explore latest escape routes, trigger hidden storylines through environmental interactions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Features -->
+        <section id="features" class="section-card glass-effect rounded-3xl p-8 md:p-12 mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">CloverPit Game Features</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+                <div class="flex items-start">
+                    <div class="feature-icon">🎲</div>
+                    <div class="ml-4">
+                        <h4 class="font-semibold text-lg mb-2">Heart-Pounding Rogue Experience</h4>
+                        <p>Every round could be your final moment!</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="feature-icon">📈</div>
+                    <div class="ml-4">
+                        <h4 class="font-semibold text-lg mb-2">Cross-Round Growth System</h4>
+                        <p>Multiple ending routes and powerful unlockable items!</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="feature-icon">🏆</div>
+                    <div class="ml-4">
+                        <h4 class="font-semibold text-lg mb-2">Endless Mode Challenge</h4>
+                        <p>Push for extreme high scores!</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="feature-icon">🔥</div>
+                    <div class="ml-4">
+                        <h4 class="font-semibold text-lg mb-2">Hellish Escape Room Atmosphere</h4>
+                        <p>Immersive dark environment!</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="feature-icon">✨</div>
+                    <div class="ml-4">
+                        <h4 class="font-semibold text-lg mb-2">150+ Items</h4>
+                        <p>Synergy effects to defy fate!</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="feature-icon">🎭</div>
+                    <div class="ml-4">
+                        <h4 class="font-semibold text-lg mb-2">Dark Addiction Narrative</h4>
+                        <p>Addiction and escape intertwined in brutal storytelling!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 p-6 bg-purple-50 rounded-2xl">
+                <h4 class="font-bold text-xl mb-3 text-purple-900">P.S. Is This a Gambling Game?</h4>
+                <p class="text-gray-700">Absolutely not! CloverPit is a light rogue-lite horror game, not a slot machine simulator. The slot machine is designed to be cracked and conquered by players, never requesting real money!</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section-card glass-effect rounded-3xl p-8 md:p-12 mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            
+            <div class="space-y-6 text-gray-700">
+                <div>
+                    <h3 class="text-xl font-semibold text-purple-700 mb-3">Q: What are the minimum system requirements?</h3>
+                    <div class="ml-4">
+                        <p class="font-semibold mb-2">A: Minimum Configuration:</p>
+                        <ul class="space-y-1 list-disc ml-6">
+                            <li><strong>Operating System:</strong> Windows 10 or newer</li>
+                            <li><strong>Processor:</strong> Intel i3 4th generation or equivalent</li>
+                            <li><strong>Memory:</strong> 1 GB RAM</li>
+                            <li><strong>Graphics:</strong> Most dedicated GPUs should work</li>
+                            <li><strong>Storage:</strong> 512 MB available space required</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-effect py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-700">
+            <p class="mb-2">&copy; 2024 CloverPit.click - All Rights Reserved</p>
+            <p class="text-sm">Ultimate guide and strategies for CloverPit game</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    const menu = document.getElementById('mobileMenu');
+                    menu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
